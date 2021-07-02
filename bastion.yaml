@@ -28,7 +28,7 @@
     - name: clone conf from github
       git:
          repo: "https://github.com/reeves0x0/ansible.git"
-         dest: /opt/ansible
+         dest: /opt
          version: main
     - tags:
         - clone_git
