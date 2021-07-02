@@ -35,7 +35,7 @@
          
     - name: copy bastion conf
       ansible.builtin.copy:
-      src: /opt/ansible/ansible_ssh_config.txt
+      src: /opt/ansible/bastion.conf
       dest: /etc/ansible/bastion.conf
       owner: root
       group: root
