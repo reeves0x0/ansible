@@ -23,19 +23,22 @@
         - sshd_restart
    
 - hosts: 127.0.0.1
+  vars_files:
+    - vars/default.yml
+    
   tasks: 
 
     - name: clone conf from github
       git:
          repo: "https://github.com/reeves0x0/ansible.git"
-         dest: /opt
+         dest: **
          version: main
     - tags:
         - clone_git
          
     - name: copy bastion conf
       ansible.builtin.copy:
-      src: /opt/ansible/bastion.conf
+      src: **
       dest: /etc/ansible/bastion.conf
       owner: root
       group: root
