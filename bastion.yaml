@@ -38,7 +38,7 @@
          
     - name: copy bastion conf
       ansible.builtin.copy:
-      src: **
+      src: {{ playbook_dir }}/bastion.conf
       dest: /etc/ansible/bastion.conf
       owner: root
       group: root
